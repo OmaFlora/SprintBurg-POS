@@ -127,4 +127,8 @@ public class Sale {
             items.forEach(item -> item.setSale(this));
         }
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 }

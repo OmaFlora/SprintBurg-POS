@@ -71,3 +71,6 @@ Una vez que la aplicación esté ejecutándose, sigue este flujo básico:
 2.  **Inventario:** Agrega nuevos productos o ajusta el stock rápidamente con los botones `+5` / `-1`.
 3.  **Personal:** Registra nuevos empleados mediante el formulario de alta.
 4.  **Reportes:** Consulta el **Historial** para ver las ventas del día y el total recaudado.
+
+## 📘 Uso del Sistema
+Para ver la guía detallada de operación para Cajeros y Gerentes, consulta nuestro [Manual de Usuario en la Wiki](link-a-tu-wiki).
