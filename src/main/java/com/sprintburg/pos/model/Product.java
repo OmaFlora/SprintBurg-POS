@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "product")
 public class Product {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,7 +29,6 @@ public class Product {
 
     public Product() {
     }
-
     public Product(String name, BigDecimal price, Integer stock, String type, BigDecimal cost) {
         this.name = name;
         this.price = price;
@@ -67,12 +65,24 @@ public class Product {
         this.stock = stock;
     }
 
+    public String getType() {
+        return type;
+    }
+
     public void setType(String type) {
         this.type = type;
     }
 
+    public BigDecimal getCost() {
+        return cost;
+    }
+
     public void setCost(BigDecimal cost) {
         this.cost = cost;
+    }
+
+    public Boolean getActive() {
+        return isActive;
     }
 
     public void setActive(Boolean active) {

@@ -36,20 +36,40 @@ public class SaleItem {
         return id;
     }
 
+    public Sale getSale() {
+        return sale;
+    }
+
     public void setSale(Sale sale) {
         this.sale = sale;
+    }
+
+    public Long getProductId() {
+        return productId;
     }
 
     public void setProductId(Long productId) {
         this.productId = productId;
     }
 
+    public Integer getQuantity() {
+        return quantity;
+    }
+
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
+    public BigDecimal getUnitPriceAtSale() {
+        return unitPriceAtSale;
+    }
+
     public void setUnitPriceAtSale(BigDecimal unitPriceAtSale) {
         this.unitPriceAtSale = unitPriceAtSale;
+    }
+
+    public String getCustomizationDetails() {
+        return customizationDetails;
     }
 
     public void setCustomizationDetails(String customizationDetails) {

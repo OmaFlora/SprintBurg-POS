@@ -56,8 +56,13 @@ public class Sale {
     public Sale() {
     }
 
+
     public Long getId() {
         return id;
+    }
+
+    public LocalDateTime getSaleDate() {
+        return saleDate;
     }
 
     public void setSaleDate(LocalDateTime saleDate) {
@@ -68,8 +73,16 @@ public class Sale {
         this.employeeId = employeeId;
     }
 
+    public Long getEmployeeId() {
+        return employeeId;
+    }
+
     public void setCustomerId(Long customerId) {
         this.customerId = customerId;
+    }
+
+    public BigDecimal getSubtotal() {
+        return subtotal;
     }
 
     public void setSubtotal(BigDecimal subtotal) {
@@ -84,12 +97,20 @@ public class Sale {
         this.taxes = taxes;
     }
 
+    public BigDecimal getTotal() {
+        return total;
+    }
+
     public void setTotal(BigDecimal total) {
         this.total = total;
     }
 
     public void setPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
     }
 
     public void setCashReceived(BigDecimal cashReceived) {
