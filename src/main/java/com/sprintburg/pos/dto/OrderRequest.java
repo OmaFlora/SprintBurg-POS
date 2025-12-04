@@ -17,8 +17,6 @@ public class OrderRequest {
 
     private BigDecimal cashAmount;
 
-    // --- Constructor ---
-
     public OrderRequest(List<OrderItemRequest> items, Long employeeId, Long customerId, String discountCode, BigDecimal cardAmount, BigDecimal cashAmount) {
         this.items = items;
         this.employeeId = employeeId;
@@ -28,22 +26,42 @@ public class OrderRequest {
         this.cashAmount = cashAmount;
     }
 
+    public OrderRequest() {
+
+    }
+
     // --- Getters y Setters ---
 
     public List<OrderItemRequest> getItems() {
         return items;
     }
 
+    public void setItems(List<OrderItemRequest> items) {
+        this.items = items;
+    }
+
     public Long getEmployeeId() {
         return employeeId;
+    }
+
+    public void setEmployeeId(Long employeeId) {
+        this.employeeId = employeeId;
     }
 
     public Long getCustomerId() {
         return customerId;
     }
 
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
+
     public String getDiscountCode() {
         return discountCode;
+    }
+
+    public void setDiscountCode(String discountCode) {
+        this.discountCode = discountCode;
     }
 
     public BigDecimal getCardAmount() {
