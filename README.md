@@ -1,4 +1,4 @@
-[![Build Status](https://app.travis-ci.com/OmaFlora/SprintBurg-POS.svg?token=Kyy4t6GWbbXgdBbHayew&branch=main)](https://app.travis-ci.com/OmaFlora/SprintBurg-POS)
+[![Build Status](https://app.travis-ci.com/OmaFlora/SprintBurg-POS.svg?token=Kyy4t6GWbbXgdBbHayew&branch=master)](https://app.travis-ci.com/OmaFlora/SprintBurg-POS)
 
 # SprintBurg POS
 
