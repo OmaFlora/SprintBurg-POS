@@ -160,10 +160,9 @@
         <div class="product-grid">
             <c:forEach var="product" items="${products}">
                 <div class="product-card type-${product.type}"
-                     onclick="addToCart(${product.id}, '${product.name}', ${product.price}, '${product.type}')">
+                     onclick="addToCart(${product.id}, '${product.name}', ${product.price})">
                     <div>
                         <div class="product-name">${product.name}</div>
-                        <div class="product-tag">${product.type}</div>
                     </div>
                     <div class="product-price">
                         <fmt:formatNumber value="${product.price}" type="currency" currencyCode="MXN"/>
@@ -237,7 +236,6 @@
             div.innerHTML =
                 '<div class="cart-item-details">' +
                 '<span class="cart-item-name">' + item.name + '</span>' +
-                '<span class="cart-item-extra">Extras: ' + (item.addIngredients.length > 0 ? 'Bacon' : '-') + '</span>' +
                 '</div>' +
                 '<button class="btn-remove" onclick="removeItem(' + index + ')">X</button>';
 
@@ -245,7 +243,7 @@
         });
 
         document.getElementById('cart-total').innerText =
-            new Intl.NumberFormat('es-MX', { style: 'currency', currency: '$' }).format(currentTotal);
+            new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(currentTotal);
     }
 
     function removeItem(index) {
@@ -268,8 +266,7 @@
                 addIngredients: item.addIngredients,
                 removeIngredients: item.removeIngredients
             })),
-            employeeId: 1,
-            discountCode: "SPRINT20"
+            employeeId: 1
         };
 
         fetch('/api/orders/calculate', {

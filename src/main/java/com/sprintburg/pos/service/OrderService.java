@@ -26,9 +26,8 @@ public class OrderService {
     private final ProductRepository productRepository;
     private final SaleRepository saleRepository;
 
-    // Constantes de negocio
     private static final BigDecimal EXTRA_INGREDIENT_COST = new BigDecimal("0.50");
-    private static final BigDecimal TAX_RATE = new BigDecimal("0.16"); // 16% IVA
+    private static final BigDecimal TAX_RATE = new BigDecimal("0.16");
 
     public OrderService(ProductRepository productRepository, SaleRepository saleRepository) {
         this.productRepository = productRepository;
@@ -71,12 +70,12 @@ public class OrderService {
         }
 
         BigDecimal discountAmount = applyDiscount(request.getDiscountCode(), preDiscountSubtotal);
-        BigDecimal finalSubtotal = preDiscountSubtotal.subtract(discountAmount);
+        BigDecimal finalSubtotal = preDiscountSubtotal;
 
         BigDecimal taxes = finalSubtotal.multiply(TAX_RATE).setScale(2, RoundingMode.HALF_UP);
         BigDecimal total = finalSubtotal.add(taxes).setScale(2, RoundingMode.HALF_UP);
 
-        return new OrderTotalResponse(preDiscountSubtotal, discountAmount, finalSubtotal, taxes, total);
+        return new OrderTotalResponse(discountAmount, finalSubtotal, taxes, total);
     }
 
     @Transactional

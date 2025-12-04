@@ -34,13 +34,12 @@ public class DataInitializer {
                 System.out.println("✅ Usuario Admin creado.");
             }
 
-            // --- 2. CREAR PRODUCTOS (Si la tabla está vacía) ---
             if (productRepository.count() == 0) {
 
                 Product p1 = new Product();
                 p1.setName("Hamburguesa Clásica");
                 p1.setPrice(new BigDecimal("55.0"));
-                p1.setCost(new BigDecimal("20.0"));
+                p1.setCost(new BigDecimal("55.0"));
                 p1.setStock(100);
                 p1.setType("BURGER_BASE");
                 p1.setActive(true);
@@ -48,7 +47,7 @@ public class DataInitializer {
                 Product p2 = new Product();
                 p2.setName("Hamburguesa Doble Queso");
                 p2.setPrice(new BigDecimal("75.0"));
-                p2.setCost(new BigDecimal("30.0"));
+                p2.setCost(new BigDecimal("75.0"));
                 p2.setStock(80);
                 p2.setType("BURGER_BASE");
                 p2.setActive(true);
@@ -56,7 +55,7 @@ public class DataInitializer {
                 Product p3 = new Product();
                 p3.setName("Papas Fritas Grandes");
                 p3.setPrice(new BigDecimal("45.0"));
-                p3.setCost(new BigDecimal("5.0"));
+                p3.setCost(new BigDecimal("45.0"));
                 p3.setStock(200);
                 p3.setType("SIDE");
                 p3.setActive(true);
@@ -64,7 +63,7 @@ public class DataInitializer {
                 Product p4 = new Product();
                 p4.setName("Refresco Cola");
                 p4.setPrice(new BigDecimal("20.0"));
-                p4.setCost(new BigDecimal("18.0"));
+                p4.setCost(new BigDecimal("20.0"));
                 p4.setStock(150);
                 p4.setType("DRINK");
                 p4.setActive(true);
@@ -72,7 +71,7 @@ public class DataInitializer {
                 Product p5 = new Product();
                 p5.setName("Tocino Extra");
                 p5.setPrice(new BigDecimal("20.00"));
-                p5.setCost(new BigDecimal("10.0"));
+                p5.setCost(new BigDecimal("20.0"));
                 p5.setStock(50);
                 p5.setType("TOPPING");
                 p5.setActive(true);
