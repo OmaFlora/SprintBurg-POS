@@ -16,9 +16,10 @@ before_script:
   - mysql -e 'CREATE DATABASE sprintburg_db;'
   - mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin';"
   - mysql -e "FLUSH PRIVILEGES;"
+  - chmod +x mvnw
 
 script:
-  - mvn clean test
+  - ./mvn clean test
 
 notifications:
   email: false
