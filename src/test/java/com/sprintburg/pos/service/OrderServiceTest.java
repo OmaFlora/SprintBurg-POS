@@ -50,7 +50,6 @@ public class OrderServiceTest {
         OrderRequest request = new OrderRequest();
         request.setItems(List.of(item));
         request.setEmployeeId(1L);
-        request.setDiscountCode("");
 
         OrderTotalResponse response = orderService.calculateOrderTotal(request);
 
