@@ -47,3 +47,25 @@ Para ejecutar **SprintBurg POS**, asegúrese de que el entorno cumpla con:
 * **Frontend:** JSP + JSTL + CSS3 (Vanilla)
 * **Seguridad:** Spring Security 6 (BCrypt Encryption)
 * **ORM:** Hibernate / Spring Data JPA
+
+## 🕹️ Uso del Sistema
+
+Una vez que la aplicación esté ejecutándose, sigue este flujo básico:
+
+### 1. Acceso (Login)
+* Navega a `/login`.
+* **Cajero:** Usa un usuario con rol `EMPLOYEE` para acceder directamente a la toma de pedidos.
+* **Gerente:** Usa un usuario con rol `MANAGER` (`admin`/`admin123`) para acceder al panel completo.
+
+### 2. Flujo de Venta (Cajero)
+1.  Desde el **Menú Principal**, selecciona **"Nueva Orden"**.
+2.  Haz clic en los productos para agregarlos al carrito.
+3.  Presiona **"Pagar"**.
+4.  Selecciona el método (Efectivo o Tarjeta) e ingresa la referencia del ticket/voucher.
+5.  El sistema confirmará la venta y descontará el stock.
+
+### 3. Gestión (Gerente)
+1.  Desde el **Menú Principal**, selecciona **"Administración"**.
+2.  **Inventario:** Agrega nuevos productos o ajusta el stock rápidamente con los botones `+5` / `-1`.
+3.  **Personal:** Registra nuevos empleados mediante el formulario de alta.
+4.  **Reportes:** Consulta el **Historial** para ver las ventas del día y el total recaudado.
