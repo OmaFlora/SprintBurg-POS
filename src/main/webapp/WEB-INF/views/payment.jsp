@@ -229,7 +229,6 @@
                 removeIngredients: item.removeIngredients
             })),
             employeeId: 1,
-            discountCode: "SPRINT20",
             ticketNumber: ticketVal,
             cashAmount: currentMethod === 'CASH' ? ${total} : 0,
             cardAmount: currentMethod === 'CARD' ? ${total} : 0

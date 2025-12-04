@@ -69,7 +69,7 @@ public class OrderService {
             preDiscountSubtotal = preDiscountSubtotal.add(itemPrice.multiply(BigDecimal.valueOf(item.getQuantity())));
         }
 
-        BigDecimal discountAmount = applyDiscount(request.getDiscountCode(), preDiscountSubtotal);
+        BigDecimal discountAmount = BigDecimal.ZERO; // Siempre cero
         BigDecimal finalSubtotal = preDiscountSubtotal;
 
         BigDecimal taxes = finalSubtotal.multiply(TAX_RATE).setScale(2, RoundingMode.HALF_UP);
@@ -111,13 +111,6 @@ public class OrderService {
                 throw new IllegalArgumentException("Producto ID y Cantidad deben ser válidos.");
             }
         }
-    }
-
-    private BigDecimal applyDiscount(String discountCode, BigDecimal subtotal) {
-        if ("SPRINT20".equalsIgnoreCase(discountCode)) {
-            return subtotal.multiply(new BigDecimal("0.20")).setScale(2, RoundingMode.HALF_UP);
-        }
-        return BigDecimal.ZERO;
     }
 
     private Sale createSaleEntity(OrderRequest request, OrderTotalResponse totals) {

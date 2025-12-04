@@ -39,7 +39,8 @@ public class OrderServiceTest {
         burger.setPrice(new BigDecimal("10.00"));
         burger.setStock(100);
 
-        Mockito.when(productRepository.findById(1L)).thenReturn(Optional.of(burger));
+        List<Product> productList = List.of(burger);
+        Mockito.when(productRepository.findAllById(Mockito.anyList())).thenReturn(productList);
 
         OrderItemRequest item = new OrderItemRequest();
         item.setProductId(1L);
