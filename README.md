@@ -1,5 +1,3 @@
-[![Build Status](https://app.travis-ci.com/OmaFlora/SprintBurg-POS.svg?token=Kyy4t6GWbbXgdBbHayew&branch=master)](https://app.travis-ci.com/OmaFlora/SprintBurg-POS)
-
 # SprintBurg POS
 
 > Sistema de Punto de Venta (POS) ágil y robusto diseñado para hamburgueserías locales.
@@ -7,6 +5,7 @@
 ![Estado del Proyecto](https://img.shields.io/badge/Estado-En_Desarrollo-orange)
 ![Java](https://img.shields.io/badge/Java-17-red)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0-green)
+[![Build Status](https://app.travis-ci.com/OmaFlora/SprintBurg-POS.svg?token=Kyy4t6GWbbXgdBbHayew&branch=master)](https://app.travis-ci.com/OmaFlora/SprintBurg-POS)
 
 ---
 
