@@ -39,8 +39,6 @@ public class Product {
         this.cost = cost;
     }
 
-    // --- Getters y Setters ---
-
     public Long getId() {
         return id;
     }
@@ -69,24 +67,12 @@ public class Product {
         this.stock = stock;
     }
 
-    public String getType() {
-        return type;
-    }
-
     public void setType(String type) {
         this.type = type;
     }
 
-    public BigDecimal getCost() {
-        return cost;
-    }
-
     public void setCost(BigDecimal cost) {
         this.cost = cost;
-    }
-
-    public Boolean getActive() {
-        return isActive;
     }
 
     public void setActive(Boolean active) {

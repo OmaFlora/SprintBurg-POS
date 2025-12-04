@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "pos_user") // Usamos pos_user para evitar conflictos con la palabra reservada 'user' en MySQL
+@Table(name = "pos_user")
 public class User {
 
     /**
@@ -38,9 +38,9 @@ public class User {
     /**
      * Rol del usuario para la autorización (Gerente o Empleado).
      */
-    @Enumerated(EnumType.STRING) // Guarda el nombre del enum como string en la BD
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Role role; // Necesitarás crear un enum Role
+    private Role role;
 
     /**
      * Indica si la cuenta está activa (ej. para empleados despedidos).
@@ -52,11 +52,8 @@ public class User {
      */
     private LocalDateTime dateCreated = LocalDateTime.now();
 
-    // --- Constructor sin argumentos (requerido por JPA) ---
     public User() {
     }
-
-    // --- Getters y Setters ---
 
     public Long getId() {
         return id;
@@ -78,10 +75,6 @@ public class User {
         this.password = password;
     }
 
-    public String getFullName() {
-        return fullName;
-    }
-
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
@@ -100,10 +93,6 @@ public class User {
 
     public void setActive(Boolean active) {
         isActive = active;
-    }
-
-    public LocalDateTime getDateCreated() {
-        return dateCreated;
     }
 
     public void setDateCreated(LocalDateTime dateCreated) {
