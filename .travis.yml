@@ -1,0 +1,33 @@
+language: java
+
+# Versión de Java (Debe coincidir con tu pom.xml)
+jdk:
+  - openjdk17
+
+# Usar la infraestructura moderna de Travis
+dist: jammy
+
+# Servicios necesarios (Levanta un MySQL temporal para las pruebas)
+services:
+  - mysql
+
+# Caché para que Maven no descargue todo internet cada vez (hace el build más rápido)
+cache:
+  directories:
+    - $HOME/.m2
+
+# Configuración previa al test (Preparar la Base de Datos)
+before_script:
+  # 1. Crear la base de datos
+  - mysql -e 'CREATE DATABASE sprintburg_db;'
+  # 2. Configurar el usuario root con tu contraseña 'admin' para que coincida con tu application.properties
+  - mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin';"
+  - mysql -e "FLUSH PRIVILEGES;"
+
+# El comando principal: Limpiar y ejecutar pruebas
+script:
+  - mvn clean test
+
+# Notificaciones (Opcional)
+notifications:
+  email: false
