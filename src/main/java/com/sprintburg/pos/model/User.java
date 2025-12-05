@@ -2,7 +2,6 @@ package com.sprintburg.pos.model;
 
 import com.sprintburg.pos.model.enums.Role;
 import jakarta.persistence.*;
-import org.springframework.security.core.GrantedAuthority;
 
 import java.time.LocalDateTime;
 

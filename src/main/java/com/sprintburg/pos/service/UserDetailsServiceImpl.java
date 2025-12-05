@@ -2,15 +2,15 @@ package com.sprintburg.pos.service;
 
 import com.sprintburg.pos.model.User;
 import com.sprintburg.pos.repository.UserRepository;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.core.GrantedAuthority; // Importación necesaria
-import org.springframework.security.core.authority.SimpleGrantedAuthority; // Importación CRUCIAL
 import org.springframework.stereotype.Service;
 
-import java.util.Collections; // Importación para Collections
-import java.util.Collection;  // Importación para Collection
+import java.util.Collection;
+import java.util.Collections;
 
 /**
  * Servicio central para cargar los detalles del usuario durante el proceso de autenticación.

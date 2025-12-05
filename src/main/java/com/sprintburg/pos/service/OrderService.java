@@ -128,8 +128,8 @@ public class OrderService {
 
         sale.setPaymentMethod(
                 cash.compareTo(BigDecimal.ZERO) > 0 && card.compareTo(BigDecimal.ZERO) == 0 ? "CASH" :
-                card.compareTo(BigDecimal.ZERO) > 0 && cash.compareTo(BigDecimal.ZERO) == 0 ? "CARD" :
-                "OTHER"
+                        card.compareTo(BigDecimal.ZERO) > 0 && cash.compareTo(BigDecimal.ZERO) == 0 ? "CARD" :
+                                "OTHER"
         );
         sale.setCashReceived(cash);
 

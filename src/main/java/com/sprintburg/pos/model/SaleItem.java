@@ -1,7 +1,8 @@
 package com.sprintburg.pos.model;
 
-import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+
 import java.math.BigDecimal;
 
 @Entity

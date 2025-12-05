@@ -29,6 +29,7 @@ public class Product {
 
     public Product() {
     }
+
     public Product(String name, BigDecimal price, Integer stock, String type, BigDecimal cost) {
         this.name = name;
         this.price = price;
@@ -41,7 +42,9 @@ public class Product {
         return id;
     }
 
-    public void setId(long id) { this.id = id; }
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

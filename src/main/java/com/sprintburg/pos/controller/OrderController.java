@@ -6,7 +6,10 @@ import com.sprintburg.pos.model.Sale;
 import com.sprintburg.pos.service.OrderService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -24,6 +27,7 @@ public class OrderController {
         OrderTotalResponse totalResponse = orderService.calculateOrderTotal(orderRequest);
         return ResponseEntity.ok(totalResponse);
     }
+
     @PostMapping("/pay")
     @PreAuthorize("hasAnyRole('EMPLOYEE', 'MANAGER')")
     public ResponseEntity<Sale> processPayment(@RequestBody OrderRequest orderRequest) {
